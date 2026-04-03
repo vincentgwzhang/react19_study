@@ -1,9 +1,9 @@
 'use client'
 
-import { useAppDispatch, useAppSelector } from '../store/hooks'
-import { increment, decrement, incrementByAmount } from '../store/slices/counterSlice'
+import { useAppDispatch, useAppSelector } from '../../store/hooks'
+import { increment, decrement, incrementByAmount } from '../../store/slices/counterSlice'
 
-export default function PracticeRedux() {
+export default function Redux1() {
   const count = useAppSelector((state) => state.counter.value)
   const dispatch = useAppDispatch()
 

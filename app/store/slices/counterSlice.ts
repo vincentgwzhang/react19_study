@@ -12,6 +12,11 @@ const counterSlice = createSlice({
     name: 'counter',           // 这个 name 会成为 action type 的前缀
     initialState,
     reducers: {
+
+        // 下面这三个 reducer 函数会自动生成对应的 action creator 和 action type
+        // 例如 increment 的 action type 就是 'counter/increment'
+        // 这里我们可以直接修改 state，因为 createSlice 内部使用了 Immer 库，它会帮我们处理不可变更新
+        // action creator 的参数会被传递给 reducer 作为 action.payload，例如 incrementByAmount 的参数会成为 action.payload
         increment(state) {
             state.value += 1
         },
